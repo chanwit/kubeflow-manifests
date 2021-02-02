@@ -65,7 +65,7 @@ spec:
   host: ml-pipeline-ui.kubeflow.svc.cluster.local
   trafficPolicy:
     tls:
-      mode: ISTIO_MUTUAL
+      mode: DISABLE
 ---
 apiVersion: "networking.istio.io/v1alpha3"
 kind: DestinationRule
@@ -75,7 +75,7 @@ spec:
   host: ml-pipeline.kubeflow.svc.cluster.local
   trafficPolicy:
     tls:
-      mode: ISTIO_MUTUAL
+      mode: DISABLE
 ---
 apiVersion: "networking.istio.io/v1alpha3"
 kind: DestinationRule
@@ -85,7 +85,7 @@ spec:
   host: ml-pipeline-visualizationserver.kubeflow.svc.cluster.local
   trafficPolicy:
     tls:
-      mode: ISTIO_MUTUAL
+      mode: DISABLE
 ---
 apiVersion: "networking.istio.io/v1alpha3"
 kind: DestinationRule
@@ -95,7 +95,7 @@ spec:
   host: mysql.kubeflow.svc.cluster.local
   trafficPolicy:
     tls:
-      mode: ISTIO_MUTUAL
+      mode: DISABLE
 ---
 apiVersion: "rbac.istio.io/v1alpha1"
 kind: ServiceRole
